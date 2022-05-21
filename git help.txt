@@ -1,0 +1,1413 @@
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git -v
+unknown option: -v
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git -version
+unknown option: -version
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git --v
+unknown option: --v
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git --version
+git version 2.36.1.windows.1
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git config --global user.name Jimi
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git config --global user.email jimichhatrala8488@gmail.com
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git config --global user.email
+jimichhatrala8488@gmail.com
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ git config --global user.name
+Jimi
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$ code .
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop
+$
+
+
+**************************************************************************************************************
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog
+$ git init
+Initialized empty Git repository in D:/xampp/htdocs/myblog/.git/
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ls -lart
+total 8
+drwxr-xr-x 1 admin 197121 0 May 21 23:36 ../
+drwxr-xr-x 1 admin 197121 0 May 21 23:37 ./
+drwxr-xr-x 1 admin 197121 0 May 21 23:37 .git/
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add index.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit
+[master (root-commit) 9d2ca9b] initial commit
+ 1 file changed, 10 insertions(+)
+ create mode 100644 index.html
+
+VIM editor opened
+(i to insert)
+ESC + :wq to quit
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+
+**************************************************************************************************************
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ^C
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ touch about.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ touch contact.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ touch monuments.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        contact.html
+        monuments.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   contact.html
+        new file:   monuments.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   contact.html
+        new file:   monuments.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   contact.html
+        new file:   monuments.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -m "Added more htmls"
+[master d445032] Added more htmls
+ 3 files changed, 10 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 contact.html
+ create mode 100644 monuments.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+clear
+**************************************************************************************************************
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout contact.html
+Updated 1 path from the index
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+        modified:   contact.html
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout -f
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git log
+commit d4450321c9938d4b952db386aa8c33cce46be9c2 (HEAD -> master)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sat May 21 23:46:30 2022 +0530
+
+    Added more htmls
+
+commit 9d2ca9bb74ae73224ae8094e3fe5f495fbb34f95
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sat May 21 23:40:21 2022 +0530
+
+    initial commit
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git log -p -1
+commit d4450321c9938d4b952db386aa8c33cce46be9c2 (HEAD -> master)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sat May 21 23:46:30 2022 +0530
+
+    Added more htmls
+
+diff --git a/about.html b/about.html
+new file mode 100644
+index 0000000..e69de29
+diff --git a/contact.html b/contact.html
+new file mode 100644
+index 0000000..ee86e94
+--- /dev/null
++++ b/contact.html
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Document</title>
++  </head>
++  <body></body>
++</html>
+diff --git a/monuments.html b/monuments.html
+
+
+quit using q
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+
+clear
+**************************************************************************************************************
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git diff
+diff --git a/index.html b/index.html
+index ee86e94..47f55d6 100644
+--- a/index.html
++++ b/index.html
+@@ -6,5 +6,5 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Document</title>
+   </head>
+-  <body></body>
++  <body class="jimi"></body>
+ </html>
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git diff
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git diff
+diff --git a/index.html b/index.html
+index 47f55d6..4090a1d 100644
+--- a/index.html
++++ b/index.html
+@@ -6,5 +6,5 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Document</title>
+   </head>
+-  <body class="jimi"></body>
++  <body class="jimimy"></body>
+ </html>
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git diff
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git diff --staged
+diff --git a/index.html b/index.html
+index ee86e94..4090a1d 100644
+--- a/index.html
++++ b/index.html
+@@ -6,5 +6,5 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Document</title>
+   </head>
+-  <body></body>
++  <body class="jimimy"></body>
+ </html>
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout -f
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+clear
+
+**************************************************************************************************************
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -a -m "Skipped staging area and fixed class='jimiz'"
+[master ea0afd5] Skipped staging area and fixed class='jimiz'
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git log
+commit ea0afd526a5493989c80e0ac243f534a03cc0b6f (HEAD -> master)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:03:11 2022 +0530
+
+    Skipped staging area and fixed class='jimiz'
+
+commit d4450321c9938d4b952db386aa8c33cce46be9c2
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sat May 21 23:46:30 2022 +0530
+
+    Added more htmls
+
+commit 9d2ca9bb74ae73224ae8094e3fe5f495fbb34f95
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sat May 21 23:40:21 2022 +0530
+
+    initial commit
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+
+
+
+
+**************************************************************************************************************
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ls
+about.html  contact.html  index.html  monuments.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ touch waste.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ls
+about.html  contact.html  index.html  monuments.html  waste.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -a -m "Adding waste"
+[master 1d8885e] Adding waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 waste.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git rm --cached waste.html^C
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git rm --cached waste.html
+rm 'waste.html'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        waste.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ls
+about.html  contact.html  index.html  monuments.html  waste.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git rm waste.html
+rm 'waste.html'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ls
+about.html  contact.html  index.html  monuments.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -a -m "Removing waste"
+[master 4604645] Removing waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 waste.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git log -p -2
+commit 46046458f5328503f371a3835866bc44931226ac (HEAD -> master)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:09:10 2022 +0530
+
+    Removing waste
+
+diff --git a/waste.html b/waste.html
+deleted file mode 100644
+index e69de29..0000000
+
+commit 1d8885ee2d221e094c849ff9d18dc4496309323b
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:05:35 2022 +0530
+
+    Adding waste
+
+diff --git a/waste.html b/waste.html
+new file mode 100644
+index 0000000..e69de29
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git log -p -1
+commit 46046458f5328503f371a3835866bc44931226ac (HEAD -> master)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:09:10 2022 +0530
+
+    Removing waste
+
+diff --git a/waste.html b/waste.html
+deleted file mode 100644
+index e69de29..0000000
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+
+
+**************************************************************************************************************
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status -s
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status -s
+ M about.html
+ M contact.html
+ M index.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add contact.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status -s
+ M about.html
+M  contact.html
+ M index.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status -s
+ M about.html
+MM contact.html
+ M index.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add contact.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status -s
+ M about.html
+M  contact.html
+ M index.html
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+
+
+**************************************************************************************************************
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ touch .gitignore
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout about.html
+Updated 1 path from the index
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout index.html
+Updated 1 path from the index
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ touch mylogs.log
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        logs/
+        mylogs.log
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   contact.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -a -m "ignored some files and added gitignore"
+[master 08e3e27] ignored some files and added gitignore
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        logs/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        new file:   logs/mylogs.log
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git rm --cached logs/mylogs.log
+rm 'logs/mylogs.log'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ignore/
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -a -m "commit message"
+[master d9c8bc6] commit message
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git log -p -3
+commit d9c8bc6fe153a83eba17ec080bb462dfd878a470 (HEAD -> master)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:26:54 2022 +0530
+
+    commit message
+
+diff --git a/.gitignore b/.gitignore
+index 3380c3b..925541e 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,13 @@
+-mylogs.log
+\ No newline at end of file
++# all related files
++# mylogs.log
++
++
++# all files
++*.log
++*.cpp
++
++# for root file
++/mylogs.log
++
++# ignore folder
++ignore/
+\ No newline at end of file
+
+commit 08e3e278986b87b736dd44469b9c735868c8b692
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:19:36 2022 +0530
+
+    ignored some files and added gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..3380c3b
+--- /dev/null
++++ b/.gitignore
+@@ -1 +1,13 @@
+-mylogs.log
+\ No newline at end of file
++# all related files
++# mylogs.log
++
++
++# all files
++*.log
++*.cpp
++
++# for root file
++/mylogs.log
++
++# ignore folder
++ignore/
+\ No newline at end of file
+
+commit 08e3e278986b87b736dd44469b9c735868c8b692
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:19:36 2022 +0530
+
+    ignored some files and added gitignore
+
+diff --git a/.gitignore b/.gitignore
+
+up down arrow key to view full log
+
+q to quit
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+
+
+**************************************************************************************************************
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git branch feature1
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git branch
+  feature1
+* master
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git status
+On branch feature1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git status
+On branch feature1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git commit -m "Fixed and added h1 tag in body"
+[feature1 5ddae58] Fixed and added h1 tag in body
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout feature1
+error: Your local changes to the following files would be overwritten by checkout:
+        contact.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git commit -a -m "Added html comment"
+[feature1 9f7d424] Added html comment
+ 1 file changed, 1 insertion(+)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git log -p -2
+commit d9c8bc6fe153a83eba17ec080bb462dfd878a470 (HEAD -> master)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:26:54 2022 +0530
+
+    commit message
+
+diff --git a/.gitignore b/.gitignore
+index 3380c3b..925541e 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,13 @@
+-mylogs.log
+\ No newline at end of file
++# all related files
++# mylogs.log
++
++
++# all files
++*.log
++*.cpp
++
++# for root file
++/mylogs.log
++
++# ignore folder
++ignore/
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git merge feature1
+Updating d9c8bc6..9f7d424
+Fast-forward
+ contact.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git log -p -2
+commit 9f7d424c91985b1beada7a71298552f3499f7e77 (HEAD -> master, feature1)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:39:20 2022 +0530
+
+    Added html comment
+
+diff --git a/contact.html b/contact.html
+index b463b5c..f5bfcd9 100644
+commit 9f7d424c91985b1beada7a71298552f3499f7e77 (HEAD -> master, feature1)
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:39:20 2022 +0530
+
+    Added html comment
+
+diff --git a/contact.html b/contact.html
+index b463b5c..f5bfcd9 100644
+--- a/contact.html
++++ b/contact.html
+@@ -1,3 +1,4 @@
++<!-- This file is fixed by jimi on feature1 branch -->
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+
+commit 5ddae58b8bf83582868ff5c8031805f06e91c3e6
+Author: Jimi <jimichhatrala8488@gmail.com>
+Date:   Sun May 22 00:33:54 2022 +0530
+
+    Fixed and added h1 tag in body
+
+diff --git a/contact.html b/contact.html
+index 496295e..b463b5c 100644
+--- a/contact.html
++++ b/contact.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+   </head>
+   <body>
+-    <h1>sffz</h1>
++    <h1>From Branch</h1>
+   </body>
+ </html>
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$
+
+
+
+
+**************************************************************************************************************
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git branch
+  feature1
+* master
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git branch
+  feature1
+* master
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout -b flaskIntegration
+Switched to a new branch 'flaskIntegration'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git branch
+  feature1
+* flaskIntegration
+  master
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ touch __init__.py
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git status
+On branch flaskIntegration
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        __init__.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git commit -m "Added flask minimal file"
+[flaskIntegration 21fb508] Added flask minimal file
+ 1 file changed, 10 insertions(+)
+ create mode 100644 __init__.py
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git status
+On branch flaskIntegration
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git checkout master
+Switched to branch 'master'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -a -m "Modified about"
+[master 3b1d5b6] Modified about
+ 1 file changed, 1 insertion(+)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout flaskIntegration
+Switched to branch 'flaskIntegration'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$
+
+
+
+**************************************************************************************************************
+
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git remote add origin git@github.com:Jimi-Chhatrala/myblog.git
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git remote
+origin
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git remote -v
+origin  git@github.com:Jimi-Chhatrala/myblog.git (fetch)
+origin  git@github.com:Jimi-Chhatrala/myblog.git (push)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git push origin master
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ssh-keygen -t rsa -b 4096 -C "jimichhatrala8488@gmail.com"
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ eval $(ssh-agent -s)
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/admin/.ssh/id_rsa (jimichhatrala8488@gmail.com)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ cat ~/.ssh/id_rsa.pub
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ ^C
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git remote set-url origin git@github.com:Jimi-Chhatrala/myblog.git
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git remote -v
+origin  git@github.com:Jimi-Chhatrala/myblog.git (fetch)
+origin  git@github.com:Jimi-Chhatrala/myblog.git (push)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git push -u origin master
+
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (28/28), 2.58 KiB | 203.00 KiB/s, done.
+Total 28 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), done.
+To github.com:Jimi-Chhatrala/myblog.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout flaskIntegration
+Switched to branch 'flaskIntegration'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git push -u origin flaskIntegration
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 410 bytes | 410.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'flaskIntegration' on GitHub by visiting:
+remote:      https://github.com/Jimi-Chhatrala/myblog/pull/new/flaskIntegration
+remote:
+To github.com:Jimi-Chhatrala/myblog.git
+ * [new branch]      flaskIntegration -> flaskIntegration
+branch 'flaskIntegration' set up to track 'origin/flaskIntegration'.
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$
+
+
+**************************************************************************************************************
+
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop/clone
+$ git clone https://github.com/Jimi-Chhatrala/myblog.git blog
+Cloning into 'blog'...
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 31 (delta 14), reused 29 (delta 12), pack-reused 0
+Receiving objects: 100% (31/31), done.
+Resolving deltas: 100% (14/14), done.
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop/clone
+$ ls
+blog/
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop/clone
+$ git clone https://github.com/Jimi-Chhatrala/myblog.git
+Cloning into 'myblog'...
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 31 (delta 14), reused 29 (delta 12), pack-reused 0
+Receiving objects: 100% (31/31), done.
+Resolving deltas: 100% (14/14), done.
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop/clone
+$ ls
+blog/  myblog/
+
+admin@DESKTOP-C924IAB MINGW64 ~/Desktop/clone
+$
+
+
+
+**************************************************************************************************************
+
+
+
+
+
+**************************************************************************************************************
+
+
+
+
+
+**************************************************************************************************************
