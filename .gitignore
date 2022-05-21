@@ -1,1 +1,13 @@
-mylogs.log
+# all related files
+# mylogs.log 
+
+
+# all files
+*.log 
+*.cpp
+
+# for root file
+/mylogs.log
+
+# ignore folder
+ignore/
