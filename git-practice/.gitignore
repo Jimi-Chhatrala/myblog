@@ -3,11 +3,11 @@
 
 
 # all files
-*.log 
-*.cpp
+# *.log 
+# *.cpp
 
 # for root file
-/mylogs.log
+# /mylogs.log
 
 # ignore folder
-ignore/
+# ignore/
