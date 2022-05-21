@@ -1400,6 +1400,277 @@ $
 
 **************************************************************************************************************
 
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git branch
+  feature1
+* flaskIntegration
+  master
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (flaskIntegration)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git merge flaskIntegration
+Merge made by the 'ort' strategy.
+ __init__.py | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ create mode 100644 __init__.py
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git help.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   git help.txt
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -m "Git Help added"
+[master a8d5b83] Git Help added
+ 1 file changed, 1413 insertions(+)
+ create mode 100644 git help.txt
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 5.36 KiB | 2.68 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To github.com:Jimi-Chhatrala/myblog.git
+   3b1d5b6..a8d5b83  master -> master
+branch 'master' set up to track 'origin/master'.
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .gitignore
+        deleted:    __init__.py
+        deleted:    about.html
+        deleted:    contact.html
+        deleted:    git help.txt
+        deleted:    index.html
+        deleted:    monuments.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-practice/
+        ignore/
+        logs/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .gitignore
+        deleted:    __init__.py
+        deleted:    about.html
+        deleted:    contact.html
+        deleted:    git help.txt
+        deleted:    index.html
+        deleted:    monuments.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-practice/
+        ignore/
+        logs/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    .gitignore -> git-practice/.gitignore
+        renamed:    __init__.py -> git-practice/__init__.py
+        renamed:    about.html -> git-practice/about.html
+        renamed:    contact.html -> git-practice/contact.html
+        renamed:    git help.txt -> git-practice/git help.txt
+        renamed:    index.html -> git-practice/index.html
+        renamed:    monuments.html -> git-practice/monuments.html
+        new file:   git-practice/mylogs.log
+        new file:   ignore/this.html
+        new file:   logs/mylogs.log
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -m "Folder Structured"
+[master e283c75] Folder Structured
+ 10 files changed, 17 insertions(+), 4 deletions(-)
+ rename .gitignore => git-practice/.gitignore (67%)
+ rename __init__.py => git-practice/__init__.py (100%)
+ rename about.html => git-practice/about.html (100%)
+ rename contact.html => git-practice/contact.html (100%)
+ rename git help.txt => git-practice/git help.txt (100%)
+ rename index.html => git-practice/index.html (100%)
+ rename monuments.html => git-practice/monuments.html (100%)
+ create mode 100644 git-practice/mylogs.log
+ create mode 100644 ignore/this.html
+ create mode 100644 logs/mylogs.log
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (8/8), 994 bytes | 331.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Jimi-Chhatrala/myblog.git
+   a8d5b83..e283c75  master -> master
+branch 'master' set up to track 'origin/master'.
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git-Help-1.png
+        Git-Help-2.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git-Help-1.png
+        new file:   Git-Help-2.png
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -m "Added Git-Help Images"
+[master 6bc0918] Added Git-Help Images
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Git-Help-1.png
+ create mode 100644 Git-Help-2.png
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    Git-Help-1.png
+        deleted:    Git-Help-2.png
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-help-image/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git add -A
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    Git-Help-1.png -> git-help-image/Git-Help-1.png
+        renamed:    Git-Help-2.png -> git-help-image/Git-Help-2.png
+
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git commit -m "Added Git-Help-Images folder"
+[master 2db1179] Added Git-Help-Images folder
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ rename Git-Help-1.png => git-help-image/Git-Help-1.png (100%)
+ rename Git-Help-2.png => git-help-image/Git-Help-2.png (100%)
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 702.14 KiB | 2.36 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Jimi-Chhatrala/myblog.git
+   e283c75..2db1179  master -> master
+branch 'master' set up to track 'origin/master'.
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$ git push -u origin feature1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature1' on GitHub by visiting:
+remote:      https://github.com/Jimi-Chhatrala/myblog/pull/new/feature1
+remote:
+To github.com:Jimi-Chhatrala/myblog.git
+ * [new branch]      feature1 -> feature1
+branch 'feature1' set up to track 'origin/feature1'.
+
+admin@DESKTOP-C924IAB MINGW64 /d/xampp/htdocs/myblog (feature1)
+$
+
 
 
 
