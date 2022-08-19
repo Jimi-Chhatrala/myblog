@@ -599,13 +599,13 @@ header .menu-toggle {
     color: red;
   }
 
-  header .menu-toggle {
+  /* header .menu-toggle {
     display: block;
     right: 20px;
     top: 20px;
     font-size: 1.7em;
     position: absolute;
-  }
+  } */
 
   header .logo {
     margin-left: 0.5em;
